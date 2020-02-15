@@ -7,7 +7,7 @@ node {
    git 'https://github.com/SaiCharanUppari/projectrepo.git'
   }
     
- def project_path="capstoneproject/Code/capstoneproject/"
+ def project_path="capstoneproject/capstoneproject/"
  
  dir(project_path) {
     
