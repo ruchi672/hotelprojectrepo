@@ -53,6 +53,10 @@ node {
         server.upload(uploadSpec)
         
         }
+	
+	stage('Downstream Build -- Docker Deployment'){
+	 build 'pipe-Docker'
+	}
 }  
 
  notify('Job Completed')   
