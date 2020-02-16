@@ -1,4 +1,5 @@
 node {
+agent any
  try  {
   notify('Job Started') 
 
@@ -53,11 +54,9 @@ node {
         server.upload(uploadSpec)
         
         }
-	/*
 	stage('Downstream Build -- Docker Deployment'){
 	 build 'pipe-Docker'
 	}
-	*/
 }  
 
  notify('Job Completed')   
@@ -65,18 +64,6 @@ node {
   notify("Error ${err}")
   currentBuild.result = 'FAILURE'
 }
-
-   post
-    {
-        success
-    {
-      	 build 'pipe-Docker'
-    }
-    failure
-    {
-	//failure steps goes here 
-    }
-    }
 
 }
 
