@@ -4,10 +4,10 @@ node {
 
      
   stage('Git-Checkout') {
-   git 'https://github.com/SaiCharanUppari/projectrepo.git'
+   git 'https://github.com/SaiCharanUppari/hotelprojectrepo.git'
   }
     
- def project_path="capstoneproject/capstoneproject/"
+ def project_path="hotelmanagement/hotelmanagement/
  
  dir(project_path) {
     
@@ -48,13 +48,13 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "target/*.war",
-                        "target": "capstoneproject"}]
+                        "target": "hotelmanagement"}]
                     }"""
         server.upload(uploadSpec)
         
         }
 	stage('Downstream Build -- Docker Deployment'){
-	 build 'pipe-Docker'
+	 build 'hotelDocker'
 	}
 }  
 
