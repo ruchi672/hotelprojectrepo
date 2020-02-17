@@ -7,7 +7,7 @@ node {
    git 'https://github.com/SaiCharanUppari/hotelprojectrepo.git'
   }
     
- def project_path="hotelmanagement/hotelmanagement/
+ def project_path="hotelmanagement/hotelmanagement/"
  
  dir(project_path) {
     
