@@ -2,7 +2,7 @@
 node {
   
   stage('GIT CheckOut') {
-    git 'https://github.com/ruchi672/projectRepository.git'
+    git 'https://github.com/ruchi672/hotelprojectrepo.git'
   }
 
   stage('Maven-Clean') {
@@ -35,7 +35,7 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "target/*.war",
-                        "target": "capstoneproject"}]
+                        "target": "hotelmanagementproject"}]
                     }"""
         server.upload(uploadSpec)
         
@@ -47,8 +47,8 @@ node {
             def downloadSpec = """{
             "files": [
             {
-                "pattern": "capstoneproject/capstoneproject-0.0.1-SNAPSHOT.war",
-                "target": "./capstoneproject.war"
+                "pattern": "hotelmanagementproject/hotelmanagement-version-1.war",
+                "target": "./hotelmanagement.war"
             }
             ]
             }"""
