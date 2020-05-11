@@ -1,0 +1,10 @@
+version: '2'
+
+
+services:
+  hotel:
+    build: . 
+    image: ruchi672/hotelmanagement:$BUILD_NUMBER
+    container_name: hotelmanagement
+    ports:
+      - '30080:8080'
