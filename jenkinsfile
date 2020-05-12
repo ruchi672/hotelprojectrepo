@@ -60,7 +60,7 @@ node {
   }
   
   stage('Pushing DockerImage to DockerHub') {
-	  docker.withRegistry('', 'ruchi-dockerhub' ) {
+	  docker.withRegistry('', 'ruchi-dockerhub1' ) {
 		    sh label: '', script: 'docker push ruchi672/hotelmanagement:$BUILD_NUMBER'
 		  }
    
